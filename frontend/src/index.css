@@ -1,0 +1,37 @@
+:root {
+  /*===== Colores =====*/
+  --first-color: #1a73e8;
+  --input-color: #80868b;
+  --border-color: #dadce0;
+
+  --primary-color: #3525d3;
+  --white-color: #fff;
+  --black-color: #3c4a57;
+  --light-gray: #e4e8ee;
+
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Roboto", sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.75rem;
+}
+
+.btns {
+  width: 100% !important;
+  margin: 15px 0 30px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  padding: 12px 29px;
+  height: 48px;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: var(--primary-color) !important;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btns:hover {
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+}
