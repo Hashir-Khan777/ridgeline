@@ -57,6 +57,16 @@ const SignUp = () => {
     }
   }, [navigate]);
 
+  useEffect(() => {
+    if (form.phoneNumber.startsWith("+1")) {
+      setForm({ ...form, state: "usa" });
+    } else if (form.phoneNumber.startsWith("+44")) {
+      setForm({ ...form, state: "uk" });
+    } else if (form.phoneNumber.startsWith("+61")) {
+      setForm({ ...form, state: "australia" });
+    }
+  }, [form]);
+
   return (
     <div className="container-fluid">
       <div className="row align-items-center justify-content-center">
@@ -89,16 +99,9 @@ const SignUp = () => {
               <label className="form-label">Phone Number</label>
               <input
                 type="text"
-                onChange={(e) => {
-                  setForm({ ...form, phoneNumber: e.target.value });
-                  if (e.target.value.startsWith("+1")) {
-                    setForm({ ...form, state: "usa" });
-                  } else if (e.target.value.startsWith("+44")) {
-                    setForm({ ...form, state: "uk" });
-                  } else if (e.target.value.startsWith("+61")) {
-                    setForm({ ...form, state: "australia" });
-                  }
-                }}
+                onChange={(e) =>
+                  setForm({ ...form, phoneNumber: e.target.value })
+                }
                 className="form-control"
                 placeholder="03000000000"
               />
