@@ -9,7 +9,7 @@ const SignUp = () => {
     password: "",
     confirmPassword: "",
     phoneNumber: "",
-    state: "",
+    state: "abc",
   });
   const [error, setError] = useState();
   const [showPassword, setShowPassword] = useState(false);
@@ -28,7 +28,7 @@ const SignUp = () => {
       form.state !== ""
     ) {
       if (form.password === form.confirmPassword) {
-        fetch("http://localhost:4000/api/auth/register", {
+        fetch("https://ridgelinebackend.herokuapp.com/api/auth/register", {
           method: "POST",
           body: JSON.stringify(form),
           headers: {

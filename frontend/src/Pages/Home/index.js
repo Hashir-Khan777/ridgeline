@@ -18,7 +18,7 @@ const Home = () => {
   }, [navigate]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/employees", {
+    fetch("https://ridgelinebackend.herokuapp.com/api/employees", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/queries", {
+    fetch("https://ridgelinebackend.herokuapp.com/api/queries", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -180,14 +180,14 @@ const Home = () => {
           <footer className="footer">
             <div className="container-fluid d-flex justify-content-between">
               <span className="text-muted d-block text-center text-sm-start d-sm-inline-block">
-                Copyright © Ridgeline 2021
+                Copyright © Mellontical Solutions {new Date().getFullYear()}
               </span>
               <span className="float-none float-sm-end mt-1 mt-sm-0 text-end">
                 {" "}
-                <a href="https://theridgelinemarketing.com/" target="_blank">
+                <a href="https://www.mellonticalsolutions.com/" target="_blank">
                   Made By
                 </a>{" "}
-                Ridgeline
+                Mellontical Solutions
               </span>
             </div>
           </footer>

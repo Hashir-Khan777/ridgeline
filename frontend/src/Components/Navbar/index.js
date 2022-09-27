@@ -38,14 +38,18 @@ const Navbar = () => {
             >
               <div className="nav-profile-img">
                 <img
-                  src={JSON.parse(localStorage.getItem("user")).image}
+                  src={
+                    JSON.parse(localStorage.getItem("user")) &&
+                    JSON.parse(localStorage.getItem("user")).image
+                  }
                   alt="image"
                 />
                 <span className="availability-status online"></span>
               </div>
               <div className="nav-profile-text">
                 <p className="mb-1 text-black">
-                  {JSON.parse(localStorage.getItem("user")).name}
+                  {JSON.parse(localStorage.getItem("user")) &&
+                    JSON.parse(localStorage.getItem("user")).name}
                 </p>
               </div>
             </a>

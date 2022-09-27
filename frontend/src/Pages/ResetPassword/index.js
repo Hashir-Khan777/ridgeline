@@ -15,7 +15,7 @@ const ResetPassword = () => {
   const submit = (e) => {
     e.preventDefault();
     if (form.password !== "") {
-      fetch("http://localhost:4000/api/auth/reset", {
+      fetch("https://ridgelinebackend.herokuapp.com/api/auth/reset", {
         method: "POST",
         body: JSON.stringify(form),
         headers: {

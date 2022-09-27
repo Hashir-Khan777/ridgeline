@@ -13,7 +13,7 @@ const ForgotPassword = () => {
   const submit = (e) => {
     e.preventDefault();
     if (form.email !== "") {
-      fetch("http://localhost:4000/api/auth/forgot", {
+      fetch("https://ridgelinebackend.herokuapp.com/api/auth/forgot", {
         method: "POST",
         body: JSON.stringify(form),
         headers: {

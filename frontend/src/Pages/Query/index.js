@@ -16,7 +16,7 @@ const Query = () => {
   const submit = (e) => {
     e.preventDefault();
     if (form.name !== "" && form.email !== "" && form.password !== "") {
-      fetch("http://localhost:4000/api/queries/post", {
+      fetch("https://ridgelinebackend.herokuapp.com/api/queries/post", {
         method: "POST",
         body: JSON.stringify(form),
         headers: {
@@ -119,13 +119,14 @@ const Query = () => {
           <footer className="footer">
             <div className="container-fluid d-flex justify-content-between">
               <span className="text-muted d-block text-center text-sm-start d-sm-inline-block">
-                Copyright © Ridgeline 2021
+                Copyright © Mellontical Solutions {new Date().getFullYear()}
               </span>
               <span className="float-none float-sm-end mt-1 mt-sm-0 text-end">
-                <a href="https://theridgelinemarketing.com/" target="_blank">
+                {" "}
+                <a href="https://www.mellonticalsolutions.com/" target="_blank">
                   Made By
-                </a>
-                Ridgeline
+                </a>{" "}
+                Mellontical Solutions
               </span>
             </div>
           </footer>

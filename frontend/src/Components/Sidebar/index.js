@@ -9,14 +9,18 @@ const Sidebar = () => {
           <a href="#" className="nav-link">
             <div className="nav-profile-image">
               <img
-                src={JSON.parse(localStorage.getItem("user")).image}
+                src={
+                  JSON.parse(localStorage.getItem("user")) &&
+                  JSON.parse(localStorage.getItem("user")).image
+                }
                 alt="profile"
               />
               <span className="login-status online"></span>
             </div>
             <div className="nav-profile-text d-flex flex-column">
               <span className="font-weight-bold mb-2">
-                {JSON.parse(localStorage.getItem("user")).name}
+                {JSON.parse(localStorage.getItem("user")) &&
+                  JSON.parse(localStorage.getItem("user")).name}
               </span>
             </div>
             <i className="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
